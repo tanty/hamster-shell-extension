@@ -26,14 +26,14 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo "   clean"
-	@echo "   clean-build  to clean the build directory of any leftovers."
+	@echo "   clean-build   to clean the build directory of any leftovers."
 	@echo "   clean-docs"
-	@echo "   collecst     to collect all required files to the build directory."
-	@echo "   compile      to compile file that needs to be shipped as a binary."
-	@echo "   develop      to install (or update) all packages required for development"
-	@echo "   dist         to package a release as a ready to deploy extension archive"
-	@echo "   open-docs    to build and open the documentation"
-	@echo "   test-docs    to run automated tests on the documentation."
+	@echo "   collect  	to collect all required files to the build directory."
+	@echo "   compile 	to compile file that needs to be shipped as a binary."
+	@echo "   develop       to install (or update) all packages required for development"
+	@echo "   dist          to package a release as a ready to deploy extension archive"
+	@echo "   open-docs     to build and open the documentation"
+	@echo "   test-docs     to run automated tests on the documentation."
 
 clean: clean-build clean-docs clean-test-docs
 	rm -f dist/*
