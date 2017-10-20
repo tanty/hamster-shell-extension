@@ -27,6 +27,7 @@ const Gtk = imports.gi.Gtk;
 const GObject = imports.gi.GObject;
 const Lang = imports.lang;
 
+
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
@@ -43,7 +44,6 @@ const HamsterSettingsWidget = new GObject.Class({
         this._settings = Convenience.getSettings();
 
         let vbox, label;
-
 
         label = new Gtk.Label();
         label.set_markup("<b>Positioning</b>");
@@ -111,6 +111,8 @@ const HamsterSettingsWidget = new GObject.Class({
 
         vbox.add(new Gtk.Label({label: "Reload gnome shell after updating prefs (alt+f2 > r)",
                                 margin_top: 70}));
+        vbox.add(new Gtk.Label({label: "You are running hamster-shell-extension version 0.1.0",
+                                margin_top: 10}));
     },
 
     _onPlacementChange: function(widget) {
@@ -153,7 +155,6 @@ const HamsterSettingsWidget = new GObject.Class({
 });
 
 function init() {
-
 }
 
 function buildPrefsWidget() {
